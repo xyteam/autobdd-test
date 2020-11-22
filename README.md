@@ -1,12 +1,12 @@
 # autobdd-test
 autobdd-test project has 2 purposes:
 1. smoke test and demo the automagic power of xyteam/autobdd test framework;
-2. serve as an example for setting up a new autobdd test project.
+2. serve as an template for setting up a new autobdd test project.
 
 #### requirement:
 docker host or docker desktop
 
-#### smoke test and demo:
+#### end-to-end test and report:
 ##### e2e test
 ```
 docker-compose run --rm autobdd-test-run "make e2e-autorunner"
@@ -22,11 +22,12 @@ python -m http.server
 then open browser to http://host-ip:8000
 to review the report
 
-#### performance test and unit test
+#### performance test
 ###### k6 performance test
 ```
 docker-compose run --rm autobdd-test-run "make k6-test"
 ```
+#### unit test
 ###### js unit test
 ```
 docker-compose run --rm autobdd-test-run "make js-test"
