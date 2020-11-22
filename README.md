@@ -20,14 +20,18 @@
 docker-compose run --rm autobdd-test-run "make e2e-autorunner"
 ```
 ##### review e2e test report
-use browser to open test-results/build-test/index.html
+use browser to open searchable cucumber report
+
+test-results/build-test/index.html
+
 or
+
 lauch a http server:
 ```
 cd test-results
 python -m http.server
 ```
-then open browser to http://host-ip:8000
+then open a browser to http://host-ip:8000
 to review the report
 
 #### performance test
@@ -36,19 +40,19 @@ to review the report
 docker-compose run --rm autobdd-test-run "make k6-test"
 ```
 #### unit test
-###### js unit test
+###### jest
 ```
 docker-compose run --rm autobdd-test-run "make js-test"
 ```
-###### cypress unit test
+###### cypress
 ```
 docker-compose run --rm autobdd-test-run "make cy-test"
 ```
-###### python3 unit test
+###### python3
 ```
 docker-compose run --rm autobdd-test-run "make py3-test"
 ```
-###### python2 unit test
+###### python2
 ```
 docker-compose run --rm autobdd-test-run "make py2-test"
 ```
