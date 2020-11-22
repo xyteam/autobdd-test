@@ -58,7 +58,7 @@ docker-compose run --rm autobdd-test-run "make py2-test"
 ```
 #### test all in one-shot
 ```
-docker-compose run --rm autobdd-test-run "make xvfb-ruinner.sh test-all"
+docker-compose run --rm autobdd-test-run "xvfb-runner.sh make test-all"
 ```
 
 #### test development env
