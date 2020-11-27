@@ -22,7 +22,7 @@ services:
     privileged: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:delegated
-      - ${HOME}/${ProjectsBase:-Projects}/${BDD_PROJECT}:/home/${USER}/Projects/AutoBDD/test-projects/${BDD_PROJECT}:delegated
+      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${BDD_PROJECT}:delegated
     ports:
       - "5924:5900"
       - "2224:22"
@@ -47,7 +47,7 @@ services:
     privileged: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:delegated
-      - ${HOME}/${ProjectsBase:-Projects}/${BDD_PROJECT}:/home/${USER}/Projects/AutoBDD/test-projects/${BDD_PROJECT}:delegated
+      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${BDD_PROJECT}:delegated
     environment:
       - USER=${USER}
       - BDD_PROJECT=${BDD_PROJECT}
