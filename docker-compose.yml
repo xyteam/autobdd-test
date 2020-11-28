@@ -22,14 +22,14 @@ services:
     privileged: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:delegated
-      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${BDD_PROJECT}:delegated
+      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${ABDD_PROJECT}:delegated
     ports:
       - "5924:5900"
       - "2224:22"
       - "8004:8000"
     environment:
       - USER=${USER}
-      - BDD_PROJECT=${BDD_PROJECT}
+      - ABDD_PROJECT=${ABDD_PROJECT}
       - HOSTOS=${HOSTOS}
       - USERID=${USERID}
       - GROUPID=${GROUPID}
@@ -47,10 +47,10 @@ services:
     privileged: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:delegated
-      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${BDD_PROJECT}:delegated
+      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${ABDD_PROJECT}:delegated
     environment:
       - USER=${USER}
-      - BDD_PROJECT=${BDD_PROJECT}
+      - ABDD_PROJECT=${ABDD_PROJECT}
       - HOSTOS=${HOSTOS}
       - USERID=${USERID}
       - GROUPID=${GROUPID}
