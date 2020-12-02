@@ -10,19 +10,19 @@
 # vnc localhost:5924
 # docker-compose down
 # 
-version: '3.5'
+version: '2.4'
 services:
 
   # dev container for developing autobdd test
   autobdd-test-dev:
     image: "xyteam/autobdd:${AutoBDD_Ver}"
     container_name: autobdd-test-dev
-    shm_size: 1536M
+    shm_size: 512M
     user: root
     privileged: true
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:delegated
-      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${ABDD_PROJECT}:delegated
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${ABDD_PROJECT}:rw
     ports:
       - "5924:5900"
       - "2224:22"
@@ -42,12 +42,15 @@ services:
   autobdd-test-run:
     image: "xyteam/autobdd:${AutoBDD_Ver}"
     container_name: autobdd-test-run
-    shm_size: 1536M
+    # for aws t2.micro
+    mem_limit: 768M
+    mem_reservation: 128M
+    shm_size: 64M
     user: root
     privileged: true
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:delegated
-      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${ABDD_PROJECT}:delegated
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - ${PWD}:/home/${USER}/Projects/AutoBDD/test-projects/${ABDD_PROJECT}:rw
     environment:
       - USER=${USER}
       - ABDD_PROJECT=${ABDD_PROJECT}
