@@ -42,10 +42,7 @@ services:
   autobdd-test-run:
     image: "xyteam/autobdd:${AutoBDD_Ver}"
     container_name: autobdd-test-run
-    # for aws t2.micro
-    mem_limit: 768M
-    mem_reservation: 128M
-    shm_size: 64M
+    shm_size: 512M
     user: root
     privileged: true
     volumes:
