@@ -1,0 +1,380 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command	V1	Stdout	Stderr
+4	:	1608952147.960	7.411	0	3154	0	0	"xvfb-runner.sh npx wdio abdd.js --spec=./features/test_vars.feature"	./features/test_vars.feature	"xrandr: Failed to get size of gamma for output screen
+Google Chrome 87.0.4280.88
+Chrome Driver 87.0.4280.88
+
+Execution of 1 spec files started at 2020-12-26T03:09:08.619Z
+
+[0-0] RUNNING in chrome - /features/test_vars.feature
+[0-0] Feature: test vars
+
+[0-0] Scenario: test vars
+
+[0-0] :browser: I open the path ""VAR:testVars.root_path""
+[0-0] chrome:version/
+[0-0] :browser: I scroll to the element ""VAR:testVars.logo_id""
+[0-0] :screen: I should see the ""VAR:testVars.logo_imageName"" image on the screen
+[0-0] /home/xywang68/Projects/AutoBDD/framework/testimages/chromeLogo.jpg
+findTargetImage.js --imagePath=/home/xywang68/Projects/AutoBDD/framework/testimages/chromeLogo.jpg --imageSimilarity=0.8 --maxSim=1 --textHint="""" --imageWaitTime=null --imageAction=null --imageMaxCount=1
+[0-0] [{""name"":""chromeLogo.jpg"",""score"":0.987655,""text"":[""@ chrome""],""textScore"":100,""location"":{""x"":1367,""y"":88},""dimension"":{""width"":129,""height"":39},""center"":{""x"":1432,""y"":108},""clicked"":null}]
+[0-0] [
+  {
+    name: 'chromeLogo.jpg',
+    score: 0.987655,
+    text: [ '@ chrome' ],
+    textScore: 100,
+    location: { x: 1367, y: 88 },
+    dimension: { width: 129, height: 39 },
+    center: { x: 1432, y: 108 },
+    clicked: null
+  }
+]
+[0-0] :screen: I expect that the ""last-seen"" image does contain the text ""VAR:testVars.logo_imageText""
+[0-0] [
+  {
+    name: 'chromeLogo.jpg',
+    score: 0.987655,
+    text: [ '@ chrome' ],
+    textScore: 100,
+    location: { x: 1367, y: 88 },
+    dimension: { width: 129, height: 39 },
+    center: { x: 1432, y: 108 },
+    clicked: null
+  }
+]
+[0-0] PASSED in chrome - /features/test_vars.feature
+
+ ""spec"" Reporter:
+------------------------------------------------------------------
+[chrome 87.0.4280.88 linux #0-0] Spec: /home/xywang68/Projects/AutoBDD/test-projects/autobdd-test/e2e-test/test-something/features/test_vars.feature
+[chrome 87.0.4280.88 linux #0-0] Running: chrome (v87.0.4280.88) on linux
+[chrome 87.0.4280.88 linux #0-0] Session ID: 6b8b25cbc9694d8b7e2f9dbce61db4bf
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0] test vars
+[chrome 87.0.4280.88 linux #0-0] [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0] [90mI want to env vars used in test cases[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]     test vars
+[chrome 87.0.4280.88 linux #0-0]     [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0]     [90mI want to env vars used in test cases[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m When :browser: I open the path ""VAR:testVars.root_path""
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m And :browser: I scroll to the element ""VAR:testVars.logo_id""
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m Then :screen: I should see the ""VAR:testVars.logo_imageName"" image on the screen
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m And :screen: I expect that the ""last-seen"" image does contain the text ""VAR:testVars.logo_imageText""
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0] [32m4 passing (3.7s)[39m
+
+
+Spec Files:	 1 passed, 1 total (100% completed) in 00:00:06 
+
+"	
+2	:	1608952147.957	7.930	0	2535	0	0	"xvfb-runner.sh npx wdio abdd.js --spec=./features/test_images.feature"	./features/test_images.feature	"xrandr: Failed to get size of gamma for output screen
+Google Chrome 87.0.4280.88
+Chrome Driver 87.0.4280.88
+
+Execution of 1 spec files started at 2020-12-26T03:09:08.574Z
+
+[0-0] RUNNING in chrome - /features/test_images.feature
+[0-0] Feature: test images
+
+[0-0] Scenario: test images
+
+[0-0] :browser: I open the path ""/""
+[0-0] chrome:version/
+[0-0] :browser: I scroll to the element ""#logo""
+[0-0] :screen: I should see the ""chromeLogo"" image on the screen
+[0-0] /home/xywang68/Projects/AutoBDD/framework/testimages/chromeLogo.jpg
+[0-0] findTargetImage.js --imagePath=/home/xywang68/Projects/AutoBDD/framework/testimages/chromeLogo.jpg --imageSimilarity=0.8 --maxSim=1 --textHint="""" --imageWaitTime=null --imageAction=null --imageMaxCount=1
+[0-0] [{""name"":""chromeLogo.jpg"",""score"":0.987655,""text"":[""@ chrome""],""textScore"":100,""location"":{""x"":1367,""y"":88},""dimension"":{""width"":129,""height"":39},""center"":{""x"":1432,""y"":108},""clicked"":null}]
+[0-0] [
+  {
+    name: 'chromeLogo.jpg',
+    score: 0.987655,
+    text: [ '@ chrome' ],
+    textScore: 100,
+    location: { x: 1367, y: 88 },
+    dimension: { width: 129, height: 39 },
+    center: { x: 1432, y: 108 },
+    clicked: null
+  }
+]
+[0-0] PASSED in chrome - /features/test_images.feature
+
+ ""spec"" Reporter:
+------------------------------------------------------------------
+[chrome 87.0.4280.88 linux #0-0] Spec: /home/xywang68/Projects/AutoBDD/test-projects/autobdd-test/e2e-test/test-something/features/test_images.feature
+[chrome 87.0.4280.88 linux #0-0] Running: chrome (v87.0.4280.88) on linux
+[chrome 87.0.4280.88 linux #0-0] Session ID: ec1a399900645c8896d73b60ea7d7a30
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0] test images
+[chrome 87.0.4280.88 linux #0-0] [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0] [90mI want to test image[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]     test images
+[chrome 87.0.4280.88 linux #0-0]     [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0]     [90mI want to test image[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m When :browser: I open the path ""/""
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m And :browser: I scroll to the element ""#logo""
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m Then :screen: I should see the ""chromeLogo"" image on the screen
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0] [32m3 passing (4.3s)[39m
+
+
+Spec Files:	 1 passed, 1 total (100% completed) in 00:00:07 
+
+"	
+1	:	1608952147.956	9.365	0	3074	0	0	"xvfb-runner.sh npx wdio abdd.js --spec=./features/test_envs.feature"	./features/test_envs.feature	"xrandr: Failed to get size of gamma for output screen
+Google Chrome 87.0.4280.88
+Chrome Driver 87.0.4280.88
+
+Execution of 1 spec files started at 2020-12-26T03:09:08.630Z
+
+[0-0] RUNNING in chrome - /features/test_envs.feature
+[0-0] Feature: test envs
+
+[0-0] Scenario: test envs
+
+[0-0] :browser: I open the path ""ENV:ROOTPATH""
+[0-0] chrome:version/
+[0-0] :browser: I scroll to the element ""ENV:LOGOID""
+[0-0] :screen: I should see the ""ENV:LOGO_FILENAME"" image on the screen
+[0-0] /home/xywang68/Projects/AutoBDD/framework/testimages/chromeLogo.jpg
+[0-0] findTargetImage.js --imagePath=/home/xywang68/Projects/AutoBDD/framework/testimages/chromeLogo.jpg --imageSimilarity=0.8 --maxSim=1 --textHint="""" --imageWaitTime=null --imageAction=null --imageMaxCount=1
+[0-0] [{""name"":""chromeLogo.jpg"",""score"":0.987655,""text"":[""@ chrome""],""textScore"":100,""location"":{""x"":1367,""y"":88},""dimension"":{""width"":129,""height"":39},""center"":{""x"":1432,""y"":108},""clicked"":null}]
+[0-0] [
+  {
+    name: 'chromeLogo.jpg',
+    score: 0.987655,
+    text: [ '@ chrome' ],
+    textScore: 100,
+    location: { x: 1367, y: 88 },
+    dimension: { width: 129, height: 39 },
+    center: { x: 1432, y: 108 },
+    clicked: null
+  }
+]
+[0-0] :screen: I expect that the ""last-seen"" image does contain the text ""ENV:LOGO_TEXT""
+[0-0] [
+  {
+    name: 'chromeLogo.jpg',
+    score: 0.987655,
+    text: [ '@ chrome' ],
+    textScore: 100,
+    location: { x: 1367, y: 88 },
+    dimension: { width: 129, height: 39 },
+    center: { x: 1432, y: 108 },
+    clicked: null
+  }
+]
+[0-0] PASSED in chrome - /features/test_envs.feature
+
+ ""spec"" Reporter:
+------------------------------------------------------------------
+[chrome 87.0.4280.88 linux #0-0] Spec: /home/xywang68/Projects/AutoBDD/test-projects/autobdd-test/e2e-test/test-something/features/test_envs.feature
+[chrome 87.0.4280.88 linux #0-0] Running: chrome (v87.0.4280.88) on linux
+[chrome 87.0.4280.88 linux #0-0] Session ID: 9accba89654dca3fd51e1f97b8b291c0
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0] test envs
+[chrome 87.0.4280.88 linux #0-0] [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0] [90mI want to env vars used in test cases[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]     test envs
+[chrome 87.0.4280.88 linux #0-0]     [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0]     [90mI want to env vars used in test cases[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m Given :browser: I open the path ""ENV:ROOTPATH""
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m When :browser: I scroll to the element ""ENV:LOGOID""
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m Then :screen: I should see the ""ENV:LOGO_FILENAME"" image on the screen
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m And :screen: I expect that the ""last-seen"" image does contain the text ""ENV:LOGO_TEXT""
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0] [32m4 passing (5.5s)[39m
+
+
+Spec Files:	 1 passed, 1 total (100% completed) in 00:00:08 
+
+"	
+3	:	1608952147.959	12.859	0	8290	0	0	"xvfb-runner.sh npx wdio abdd.js --spec=./features/test_ocr.feature"	./features/test_ocr.feature	"xrandr: Failed to get size of gamma for output screen
+Google Chrome 87.0.4280.88
+Chrome Driver 87.0.4280.88
+
+Execution of 1 spec files started at 2020-12-26T03:09:08.560Z
+
+[0-0] RUNNING in chrome - /features/test_ocr.feature
+[0-0] Feature: test ocr
+
+[0-0] Scenario: test screen area ocr
+
+[0-0] :browser: I open the path ""/""
+[0-0] chrome:version/
+[0-0] :screen: I expect that the screen area does contain the text ""Official Build""
+getImageText.js
+[0-0] Warning: Invalid resolution 0 dpi. Using 70 instead.
+Estimating resolution as 127
+[0-0] [
+  {
+    text: [
+      '@ About version Pa',
+      '',
+      'e Ce eco elua-2)/ A)',
+      '',
+      ' ',
+      '',
+      '87.0.4280.88 (Official Build) (64-bit) chrome',
+      '89e2380a3e36c3464b5dd1302349b1382549290d- refs/branch-',
+      '',
+      'Google LLC',
+      'heads /4280@{#1761} Copyright 2020 Google LLC. All',
+      '',
+      '   ',
+      '',
+      'Linux rights reserved.',
+      'JavaScript: v8 8.7.220.29',
+      'Flash: 24.0.0.189 internal-not-yet-present',
+      '',
+      ' ',
+      '',
+      'User Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36',
+      '(KHTML, Like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+      '/usr/bin/google-chrome --disable-background-networking',
+      '--disable-client-side-phishing-detection --disable-',
+      'default-apps --disable-dev-shm-usage --disable-gpu --',
+      'disable-hang-monitor --disable-infobars --disable-',
+      'popup-blocking --disable-prompt-on-repost --disable-',
+      'setuid-sandbox --disable-sync --enable-automation',
+      'enable-blink-features=ShadowDOMV@ --enable-logging --',
+      'ignore-certificate-errors --incognito --log-level=0 --',
+      'no-first-run --no-sandbox --no-service-autorun',
+      'password-storesbasic --remote-debugging-port',
+      'type=webdriver --use-mock-keychain --user-data-',
+      'dir=/tmp/chrome_profile 102 --window-size=1920,1200 --',
+      'flag-switches-begin --flag-switches-end',
+      'Executable Path: /opt/google/chrome/google-chrome',
+      '',
+      'Profile Path: /tmp/chrome_profile 102/Default',
+      '',
+      'Command',
+      '',
+      ' ',
+      '',
+      ' ',
+      '',
+      ' ',
+      '',
+      ' ',
+      '',
+      ' ',
+      '',
+      'test-',
+      '',
+      ' ',
+      '',
+      ' ',
+      '',
+      '  ',
+      '\f'
+    ],
+    exitcode: 0
+  }
+]
+[0-0] Scenario: test screen center area ocr
+
+[0-0] :browser: I open the path ""/""
+[0-0] chrome:version/
+[0-0] :screen: I expect that the ""Screen-200"" image does contain the text ""Profile Path:""
+[0-0] findTargetImage.js --imagePath=Screen-200 --imageSimilarity=0.8 --maxSim=1 --textHint="""" --imageWaitTime=null --imageAction=null --imageMaxCount=1
+[0-0] [{""name"":""Screen-200"",""score"":null,""text"":[""user agent:"",""Command Line:"",""Executable Path:"",""Profile Path:"",""MOZ1LLLa/so.U (ALL; LINUX XoO_ 64) APPLEWeEDALT/55/.50"",""(KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"",""/usr/bin/google-chrome --disable-background-networking"",""--disable-client-side-phishing-detection --disable-"",""default-apps --disable-dev-shm-usage --disable-gpu --"",""disable-hang-monitor --disable-infobars --disable-"",""popup-blocking --disable-prompt-on-repost --disable-"",""setuid-sandbox --disable-sync --enable-automation --"",""enable-blink-features=ShadowDOMVO --enable-logging --"",""ignore-certificate-errors --incognito --log-level=0 --"",""no-first-run --no-sandbox --no-service-autorun --"",""password-store=basic --remote-debugging-port=0 --test-"",""type=webdriver --use-mock-keychain --user-data-"",""dir=/tmp/chrome_profile_102 --window-size=1920,1200 --"",""flag-switches-begin --flag-switches-end"",""/opt/google/chrome/google- chrome"",""/tmp/chrome_profile_102/Default""],""textScore"":null,""location"":{""x"":200,""y"":200},""dimension"":{""width"":1520,""height"":800},""center"":{""x"":960,""y"":600},""clicked"":null}]
+[0-0] [
+  {
+    name: 'Screen-200',
+    score: null,
+    text: [
+      'user agent:',
+      'Command Line:',
+      'Executable Path:',
+      'Profile Path:',
+      'MOZ1LLLa/so.U (ALL; LINUX XoO_ 64) APPLEWeEDALT/55/.50',
+      '(KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+      '/usr/bin/google-chrome --disable-background-networking',
+      '--disable-client-side-phishing-detection --disable-',
+      'default-apps --disable-dev-shm-usage --disable-gpu --',
+      'disable-hang-monitor --disable-infobars --disable-',
+      'popup-blocking --disable-prompt-on-repost --disable-',
+      'setuid-sandbox --disable-sync --enable-automation --',
+      'enable-blink-features=ShadowDOMVO --enable-logging --',
+      'ignore-certificate-errors --incognito --log-level=0 --',
+      'no-first-run --no-sandbox --no-service-autorun --',
+      'password-store=basic --remote-debugging-port=0 --test-',
+      'type=webdriver --use-mock-keychain --user-data-',
+      'dir=/tmp/chrome_profile_102 --window-size=1920,1200 --',
+      'flag-switches-begin --flag-switches-end',
+      '/opt/google/chrome/google- chrome',
+      '/tmp/chrome_profile_102/Default'
+    ],
+    textScore: null,
+    location: { x: 200, y: 200 },
+    dimension: { width: 1520, height: 800 },
+    center: { x: 960, y: 600 },
+    clicked: null
+  }
+]
+[0-0] Scenario: test target image ocr
+
+[0-0] :browser: I open the path ""/""
+[0-0] chrome:version/
+[0-0] :screen: I expect that the ""chromeLogo"" image does contain the text ""chrome""
+[0-0] /home/xywang68/Projects/AutoBDD/framework/testimages/chromeLogo.jpg
+[0-0] findTargetImage.js --imagePath=/home/xywang68/Projects/AutoBDD/framework/testimages/chromeLogo.jpg --imageSimilarity=0.8 --maxSim=1 --textHint="""" --imageWaitTime=null --imageAction=null --imageMaxCount=1
+[0-0] [{""name"":""chromeLogo.jpg"",""score"":0.987655,""text"":[""@ chrome""],""textScore"":100,""location"":{""x"":1367,""y"":88},""dimension"":{""width"":129,""height"":39},""center"":{""x"":1432,""y"":108},""clicked"":null}]
+[0-0] [
+  {
+    name: 'chromeLogo.jpg',
+    score: 0.987655,
+    text: [ '@ chrome' ],
+    textScore: 100,
+    location: { x: 1367, y: 88 },
+    dimension: { width: 129, height: 39 },
+    center: { x: 1432, y: 108 },
+    clicked: null
+  }
+]
+[0-0] PASSED in chrome - /features/test_ocr.feature
+
+ ""spec"" Reporter:
+------------------------------------------------------------------
+[chrome 87.0.4280.88 linux #0-0] Spec: /home/xywang68/Projects/AutoBDD/test-projects/autobdd-test/e2e-test/test-something/features/test_ocr.feature
+[chrome 87.0.4280.88 linux #0-0] Running: chrome (v87.0.4280.88) on linux
+[chrome 87.0.4280.88 linux #0-0] Session ID: 2280161b37ea4912e141b47244b34bcd
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0] test ocr
+[chrome 87.0.4280.88 linux #0-0] [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0] [90mI want to test ocr[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]     test screen area ocr
+[chrome 87.0.4280.88 linux #0-0]     [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0]     [90mI want to test ocr[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m When :browser: I open the path ""/""
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m Then :screen: I expect that the screen area does contain the text ""Official Build""
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]     test screen center area ocr
+[chrome 87.0.4280.88 linux #0-0]     [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0]     [90mI want to test ocr[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m When :browser: I open the path ""/""
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m Then :screen: I expect that the ""Screen-200"" image does contain the text ""Profile Path:""
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]     test target image ocr
+[chrome 87.0.4280.88 linux #0-0]     [90mAs a QA Engineer[39m
+[chrome 87.0.4280.88 linux #0-0]     [90mI want to test ocr[39m
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m When :browser: I open the path ""/""
+[chrome 87.0.4280.88 linux #0-0]        [32m✓[39m Then :screen: I expect that the ""chromeLogo"" image does contain the text ""chrome""
+[chrome 87.0.4280.88 linux #0-0]
+[chrome 87.0.4280.88 linux #0-0] [32m6 passing (9.1s)[39m
+
+
+Spec Files:	 1 passed, 1 total (100% completed) in 00:00:11 
+
+"	
