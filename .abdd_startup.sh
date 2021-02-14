@@ -1,1 +1,1 @@
-#/root/enable_python2_support.sh
+/root/enable_python2_support.sh

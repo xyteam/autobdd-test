@@ -67,6 +67,7 @@ py2-test:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running python2 unit test...";
+	pip2 install -r py-test/requirement.txt && \
 	python2 -m pytest -r A py-test || exit $$?;
 	@echo ${testSectionEnd}
 
@@ -94,5 +95,5 @@ k6-test:
 	cd k6-test && find . -type f -name "*-test.js" | xargs k6 run || exit $$?;
 	@echo ${testSectionEnd}
 
-test-all: e2e-test cy-test js-test py3-test k6-test
+test-all: e2e-test cy-test js-test py3-test py2-test k6-test
 	@echo make $@
