@@ -5,7 +5,7 @@ testSectionEnd="----------\nDone Test\n=========="
 
 docker-run:
 	@echo make $@
-	docker-compose run --rm autobdd-test-run "make ${jobs}"
+	docker-compose run --rm autobdd-test-run "xvfb-runner.sh make ${jobs}"
 clean:
 	@echo make $@
 	@echo "cleaning build-test folder...";
