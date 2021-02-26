@@ -1,4 +1,4 @@
-// test env vars here
+// module level env vars here
 process.env.ROOTPATH = '/';
 process.env.LOGOID = '#logo';
 process.env.LOGO_FILENAME = 'chromeLogo';
