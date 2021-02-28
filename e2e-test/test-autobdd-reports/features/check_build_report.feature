@@ -23,7 +23,7 @@ Feature: test autobdd reports
   Scenario: check arunner report
     When  :browser: I open the file "~/Projects/AutoBDD/test-projects/autobdd-test/test-results/arunner-report/index.html"
     Then  :browser: I expect that the page title does equal the text "Multiple Cucumber HTML Reporter"
-    And   :browser: I expect that the element "div.total" inside the 1st parent element "table.chart" does contain the text "4"
+    And   :browser: I expect that the element "div.total" inside the 1st parent element "table.chart" does contain the text "1"
     And   :browser: I expect that the 1st element "table.tile_info" does match the regex "Passed[\s]+100.00 %[\s]+Failed[\s]+0.00 %"
-    And   :browser: I expect that the element "div.total" inside the 2nd parent element "table.chart" does contain the text "6"
+    And   :browser: I expect that the element "div.total" inside the 2nd parent element "table.chart" does contain the text "1"
     And   :browser: I expect that the 2nd element "table.tile_info" does match the regex "Passed[\s]+100.00 %[\s]+Failed[\s]+0.00 %"

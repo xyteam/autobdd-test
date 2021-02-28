@@ -21,7 +21,7 @@ e2e-arunner:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cucumber test with arunner.sh (single runner)...";
-	cd e2e-test/test-1nit && SCREENSHOT=3 MOVIE=1 REPORTDIR=../test-results/arunner-report arunner.sh || exit $$?;
+	cd e2e-test/test-1nit && SCREENSHOT=3 MOVIE=1 REPORTDIR=../../test-results/arunner-report arunner.sh || exit $$?;
 	@echo ${testSectionEnd}
 
 e2e-prunner:
@@ -31,7 +31,7 @@ e2e-prunner:
 	cd e2e-test && SCREENSHOT=3 MOVIE=1 REPORTDIR=../test-results/prunner-report prunner.sh test-autobdd-libs || exit $$?;
 	@echo ${testSectionEnd}
 
-e2e-autorunner: clean
+e2e-autorunner:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cucumber test with autorunner (parallel runner with cucumber report)...";
