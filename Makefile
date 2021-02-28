@@ -21,14 +21,14 @@ e2e-arunner:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cucumber test with arunner.sh (single runner)...";
-	cd e2e-test/test-init && arunner.sh || exit $$?;
+	cd e2e-test/test-1nit && arunner.sh || exit $$?;
 	@echo ${testSectionEnd}
 
 e2e-prunner:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cucumber test with prunner.sh (parllel runner)...";
-	cd e2e-test/test-something && prunner.sh || exit $$?;
+	cd e2e-test/test-autobdd-libs && prunner.sh || exit $$?;
 	@echo ${testSectionEnd}
 
 e2e-autorunner: clean
@@ -43,7 +43,7 @@ e2e-autoreport:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "checking cucumber report...";
-	cd e2e-test/check-report && prunner.sh || exit $$?;
+	cd e2e-test/test-autobdd-reports && prunner.sh || exit $$?;
 	@echo ${testSectionEnd}
 
 e2e-test: e2e-arunner e2e-prunner e2e-autorunner e2e-autoreport
