@@ -8,12 +8,12 @@ docker-run:
 	docker-compose run --rm autobdd-test-run "xvfb-runner.sh make ${jobs}"
 clean:
 	@echo make $@
-	@echo "cleaning build-test folder...";
+	@echo "cleaning autorunner-report folder...";
 	rm -rf test-results/*;
 	find . -type d -name "__pycache__" -o -name ".pytest_cache" | xargs rm -rf;
 	find . -type f -name "*.pyc" | xargs rm -f;
 	find e2e-test -type d -name logs | xargs rm -rf;
-	find e2e-test -type d -name test-results | xargs rm -rf;
+	find e2e-test -type d -name test-results -o -name arunner-report -o -name prunner-report -o -name autorunner-report | xargs rm -rf;
 	find e2e-test -type f -name "test-*.json" | xargs rm -f;
 	find e2e-test -type f -name "Passed_*.???" -o -name "Failed_*.???" -o -name "Recording_*.???" | xargs rm -f;
 
@@ -21,22 +21,22 @@ e2e-arunner:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cucumber test with arunner.sh (single runner)...";
-	cd e2e-test/test-1nit && arunner.sh || exit $$?;
+	cd e2e-test/test-1nit && SCREENSHOT=3 MOVIE=1 REPORTDIR=../test-results/arunner-report arunner.sh || exit $$?;
 	@echo ${testSectionEnd}
 
 e2e-prunner:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cucumber test with prunner.sh (parllel runner)...";
-	cd e2e-test/test-autobdd-libs && prunner.sh || exit $$?;
+	cd e2e-test && SCREENSHOT=3 MOVIE=1 REPORTDIR=../test-results/prunner-report prunner.sh test-autobdd-libs || exit $$?;
 	@echo ${testSectionEnd}
 
 e2e-autorunner: clean
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cucumber test with autorunner (parallel runner with cucumber report)...";
-	autorunner.py --project autobdd-test --reportpath build-test --movie 1 -- --cucumberOpts.tags='not @Init and not @Report' || exit $$?;
-	find test-results/build-test -type f -name "*.run" | xargs cat || exit $$?;
+	autorunner.py --project autobdd-test --reportpath autorunner-report --movie 1 -- --cucumberOpts.tags='not @Init and not @Report' || exit $$?;
+	find test-results/autorunner-report -type f -name "*.run" | xargs cat || exit $$?;
 	@echo ${testSectionEnd}
 
 e2e-autoreport:

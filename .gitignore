@@ -132,7 +132,9 @@ test-results.xml
 **/.DS_Store
 **/.screenshots/
 **/videos/
-**/bdd_reports/
+**/arunner-report/
+**/prunner-report/
+**/autorunner-report/
 **/test-results/
 **/allure-reports/
 **/allure-results/
