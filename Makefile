@@ -95,5 +95,5 @@ k6-test:
 	cd k6-test && find . -type f -name "*-test.js" | xargs k6 run || exit $$?;
 	@echo ${testSectionEnd}
 
-test-all: e2e-test cy-test js-test py3-test py2-test k6-test
+test-all: clean e2e-test cy-test js-test py3-test py2-test k6-test
 	@echo make $@
