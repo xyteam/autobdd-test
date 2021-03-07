@@ -1,7 +1,5 @@
 const All = {
-  logo_id: '#logo',
-  logo_imageName: 'chromeLogo',
-  logo_imageText: 'chrome'
+  root_path: '/',
 };
 
 const CH = {
