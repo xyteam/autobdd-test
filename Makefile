@@ -79,7 +79,7 @@ py3-test:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running python3 unit test...";
-	pip3 install -r py-test/requirement.txt && \
+	pip3 install -r py-test/requirement3.txt && \
 	python3 -m pytest -r A py-test || exit $$?;
 	@echo ${testSectionEnd}
 
@@ -87,7 +87,7 @@ py2-test:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running python2 unit test...";
-	pip2 install -r py-test/requirement.txt && \
+	pip2 install -r py-test/requirement2.txt && \
 	python2 -m pytest -r A py-test || exit $$?;
 	@echo ${testSectionEnd}
 
