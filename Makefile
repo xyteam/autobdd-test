@@ -85,7 +85,7 @@ cy-test: cal-app-start
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cypress test...";
-	cd cal-app && cypress run || exit $$?;
+	cd cal-app && npm install && cypress run || exit $$?;
 	@echo ${testSectionEnd}
 
 k6-test:
