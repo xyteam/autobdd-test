@@ -72,7 +72,7 @@ js-test:
 	@echo ${testSectionBegin};
 	@echo "running jest unit test...";
 	cd js-test && npm install && \
-	jest --verbose . || exit $$?;
+	node_modules/.bin/jest --verbose . || exit $$?;
 	@echo ${testSectionEnd}
 
 py3-test:
