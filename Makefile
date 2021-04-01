@@ -6,6 +6,24 @@ testSectionEnd="----------\nDone Test\n=========="
 docker-run:
 	@echo make $@
 	docker-compose run --rm autobdd-test-run "xvfb-runner.sh make ${jobs}"
+docker-run-bash:
+	@echo make $@
+	docker-compose run --rm autobdd-test-run "/bin/bash"
+docker-up:
+	@echo make $@
+	docker-compose up -d autobdd-test-dev
+docker-logs:
+	@echo make $@
+	docker-compose logs autobdd-test-dev
+docker-logs-f:
+	@echo make $@
+	docker-compose logs -f autobdd-test-dev
+docker-down:
+	@echo make $@
+	docker-compose down
+docker-ssh:
+	ssh $$USER@localhost -p 2224 || exit $?
+
 clean:
 	@echo make $@
 	@echo "cleaning autorunner-report folder...";
@@ -53,13 +71,15 @@ js-test:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running jest unit test...";
-	jest --verbose js-test || exit $$?;
+	cd js-test && npm install && \
+	jest --verbose . || exit $$?;
 	@echo ${testSectionEnd}
 
 py3-test:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running python3 unit test...";
+	pip3 install -r py-test/requirement.txt && \
 	python3 -m pytest -r A py-test || exit $$?;
 	@echo ${testSectionEnd}
 
@@ -85,7 +105,9 @@ cy-test: cal-app-start
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cypress test...";
-	cd cal-app && npm install && cypress run || exit $$?;
+	cd cal-app && \
+	node_modules/.bin/cypress install && \
+	node_modules/.bin/cypress run || exit $$?;
 	@echo ${testSectionEnd}
 
 k6-test:
