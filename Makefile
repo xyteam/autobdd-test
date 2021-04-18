@@ -46,13 +46,13 @@ e2e-prunner:
 	@echo make $@
 	@echo ${testSectionBegin};
 	@echo "running cucumber test with prunner.sh (parllel runner)...";
-	cd e2e-test && SCREENSHOT=3 MOVIE=1 REPORTDIR=../test-results/prunner-report prunner.sh test-autobdd-libs || exit $$?;
+	cd e2e-test/test-autobdd-libs && SCREENSHOT=3 MOVIE=1 REPORTDIR=../../test-results/prunner-report prunner.sh || exit $$?;
 	@echo ${testSectionEnd}
 
 e2e-autorunner:
 	@echo make $@
 	@echo ${testSectionBegin};
-	@echo "running cucumber test with autorunner (parallel runner with cucumber report)...";
+	@echo "running cucumber test with autorunner (original parallel runner)...";
 	autorunner.py --project autobdd-test --reportpath autorunner-report --movie 1 -- --cucumberOpts.tags='not @Init and not @Report' || exit $$?;
 	find test-results/autorunner-report -type f -name "*.run" | xargs cat || exit $$?;
 	@echo ${testSectionEnd}
