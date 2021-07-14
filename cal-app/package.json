@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.3.1",
     "bootstrap": "^4.2.1",
     "cypress": "^6.3.0",
-    "@shelex/cypress-allure-plugin": "^2.3.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "forever": "^3.0.0",

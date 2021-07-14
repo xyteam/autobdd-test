@@ -6,7 +6,7 @@ Feature: test ocr
 
   Scenario: test screen area ocr
     When  :browser: I open the path "/"
-    Then  :screen: I expect that the screen area does contain the text "Official Build"
+    Then  :screen: I expect that the screen area does contain the text "Google LLC"
 
   Scenario: test screen center area ocr
     When  :browser: I open the path "/"
